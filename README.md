@@ -10,8 +10,8 @@ It automatically adapts to the sender and recent chat context, making conversati
 
 **Clone the repository**
 ```bash
-git clone https://github.com/username/repo-name.git
-cd repo-name
+git clone https://github.com/pk91990/ai-chatbot.git
+cd ai-chatbot
 ```
 
 **Install dependencies**
