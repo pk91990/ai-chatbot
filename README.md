@@ -1,36 +1,79 @@
 # 🤖 WhatsApp Gemini AI Bot
 
-A WhatsApp bot powered by **[whatsapp-web.js](https://github.com/pedroslopez/whatsapp-web.js)** and **Google Gemini AI**.  
+A WhatsApp bot powered by **whatsapp-web.js** and **Google Gemini AI**.  
 This bot can chat in different modes like **Normal, Girlfriend, Study Buddy, Family, and Friend**.  
 It automatically adapts to the sender and recent chat context, making conversations feel natural.
 
 ---
 
-## ✨ Features
-- 📝 Context-aware replies (uses last 5–10 messages).
-- 🔄 Multiple modes:
-  - **Normal** → Casual friendly chat
-  - **GF** → Girlfriend-like mode 💕
-  - **Study** → Study buddy 📚
-  - **Family** → Polite family-style messages 👪
-  - **Friend** → Close friend-style chatting 🎉
-- 🗣️ Text-to-Speech for errors (via `say` package).
-- 🔑 Secure API key handling via `.env`.
-- ⚡ Powered by **Google Gemini AI**.
+## ⚙️ Installation
+
+**Clone the repository**
+```bash
+git clone https://github.com/username/repo-name.git
+cd repo-name
+```
+
+**Install dependencies**
+```bash
+npm install
+```
+
+**Create .env file**  
+Add your Gemini API Key inside `.env` file:
+```env
+GEMINI_API_KEY=your_gemini_api_key_here
+```
+
+**Run the bot**
+```bash
+node index.js
+```
+
+**Scan QR Code**
+- Open WhatsApp → Linked Devices → Scan QR from your phone.  
+- After successful scan, the bot will be ready ✅
 
 ---
 
-## 📦 Dependencies
-This project requires:
+## 🔄 Modes
 
-- [Node.js](https://nodejs.org/) (v18+ recommended)
-- [whatsapp-web.js](https://github.com/pedroslopez/whatsapp-web.js)
-- [qrcode-terminal](https://www.npmjs.com/package/qrcode-terminal)
-- [dotenv](https://www.npmjs.com/package/dotenv)
-- [fs](https://nodejs.org/api/fs.html) (built-in Node.js module)
-- [say](https://www.npmjs.com/package/say)
-- [@google/generative-ai](https://www.npmjs.com/package/@google/generative-ai)
+You can switch modes manually by sending commands:
 
-Install all dependencies with:
-```bash
-npm install whatsapp-web.js qrcode-terminal dotenv say @google/generative-ai
+- `mode normal` → Normal AI Assistant 🗨️  
+- `mode gf` → Girlfriend Mode 💕  
+- `mode study` → Study Buddy 📚  
+- `mode family` → Family Style 👪  
+- `mode friend` → Close Friend 🎉  
+
+---
+
+## 📝 Example Usage
+
+## 📱 Auto Mode by Number
+
+The bot automatically switches mode depending on the sender’s number:
+
+- **919999099999@c.us** → Family Mode 👪  example 91<enter a number>@c.us
+- **919999099999@c.us** → Girlfriend Mode 💕 example 91<enter a number>@c.us
+- **919999099999@c.us** → Study Buddy Mode 📚 example 91<enter a number>@c.us
+- **919999099999@c.us** → Friend Mode 🎉 example 91<enter a number>@c.us
+- **Default** → Normal Mode 🗨️  
+
+Example:
+```
+Mom: Beta khaana kha liya?
+Bot (Family Mode): Haan Maa, abhi khaya 😇
+```
+
+```
+GF: Missed you!
+Bot (GF Mode): Aww, I missed you too 😘
+```
+
+
+## ⚠️ Notes
+
+- First run me QR scan karna hoga.  
+- `say` package Mac/Linux me easily chalega. Windows me voices install honi chahiye.  
+- This bot is for **personal/educational use** only.  
